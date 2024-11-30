@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+
+{% block body %}
+<h1>Liste des produits</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Reference</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in pagination.items %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{product.reference }}</td>
+                    <td>{{ product.description }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">Aucun produit trouvé.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {# Pagination navigation #}
+    <div class="d-flex justify-content-center">
+        {{ knp_pagination_render(pagination, '@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig') }}
+    </div>
+
+{% endblock %}
