@@ -11,3 +11,6 @@ root_redirect:
     controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
     defaults:
         route: home
+auth:
+    path: /auth
+    methods: ['POST']
