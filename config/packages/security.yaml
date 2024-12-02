@@ -17,7 +17,10 @@ security:
             pattern: ^/api/
             stateless: true
             provider: app_user_provider
+            entry_point: jwt
             jwt: ~
+            refresh_jwt:
+                check_path: /api/token/refresh
         main:
             lazy: true
             provider: app_user_provider
@@ -46,10 +49,10 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         
-        - { path: '^/{_locale}/login', roles: PUBLIC_ACCESS }
-        - { path: '^/{_locale}/logout', roles: PUBLIC_ACCESS }
+        - { path: '^/(fr|en|es)/login', roles: PUBLIC_ACCESS }
+        - { path: '^/(fr|en|es)/logout', roles: PUBLIC_ACCESS }
         - { path: ^/auth, roles: PUBLIC_ACCESS }
-        - { path: '^/{_locale}/register', roles: PUBLIC_ACCESS }
+        - { path: '^/(fr|en|es)/register', roles: PUBLIC_ACCESS }
         - { path: '^/api/products', roles: [ IS_AUTHENTICATED_FULLY]   }
         - { path: '^/api', roles: PUBLIC_ACCESS  }
         - { path: ^/profile, roles: ROLE_USER }
