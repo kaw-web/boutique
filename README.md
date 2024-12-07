@@ -1,5 +1,9 @@
 
+## Fonctionalités principales
+Ce projet est une application vitrine développée avec Symfony 6 et API Platform. Il a pour objectif de présenter et gérer un catalogue de produits en mettant en œuvre des fonctionnalités essentielles telles que :
 
+Liste et pagination des produits : Les utilisateurs peuvent parcourir les produits organisés en pages pour une navigation fluide.
+Exposition des produits via API Platform : Une API RESTful complète est configurée, permettant l'accès aux produits avec des actions comme ajout, modification, suppression, et consultation.
 
 
 ## Technologies utilisées
@@ -23,4 +27,5 @@
 - composer require api
 - composer require symfony/security-bundle lexik/jwt-authentication-bundle
 - composer require symfony/translation
+- composer require knplabs/knp-paginator-bundle
 
