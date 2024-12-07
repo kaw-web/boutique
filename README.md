@@ -18,4 +18,9 @@
 - **Système de traduction**:  
   - Application multilingue avec prise en charge de plusieurs langues.  
   - Mise en œuvre de l'internationalisation (i18n).
-    
+
+## Dépendances utilisées    
+- composer require api
+- composer require symfony/security-bundle lexik/jwt-authentication-bundle
+- composer require symfony/translation
+
