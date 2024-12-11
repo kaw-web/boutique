@@ -28,6 +28,7 @@ class ProductController extends AbstractController
 
     }
 
+
     #[Route('/home', name: 'home', methods:'GET')]
     public function home(Request $request, ProductRepository $productRepository, PaginatorInterface $paginator, LoggerInterface $logger)
     {
