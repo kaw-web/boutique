@@ -38,8 +38,6 @@ RUN chmod +x /usr/local/bin/wait-for-it.sh
 COPY symfony.conf /etc/apache2/sites-available/000-default.conf
 
 
-
-
 # Copier le script d'initialisation
 COPY init.sh /usr/local/bin/init.sh
 RUN chmod +x /usr/local/bin/init.sh
