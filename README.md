@@ -24,3 +24,8 @@
 - composer require symfony/security-bundle lexik/jwt-authentication-bundle
 - composer require symfony/translation
 
+## Dockerisation du projet
+lancer :
+    docker-compose build
+    docker-compose up
+
