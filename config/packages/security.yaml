@@ -50,6 +50,7 @@ security:
     access_control:
         
         - { path: '^/(fr|en|es)/login', roles: PUBLIC_ACCESS }
+        - { path: '^/(fr|en|es)/registration', roles: PUBLIC_ACCESS }
         - { path: '^/(fr|en|es)/logout', roles: PUBLIC_ACCESS }
         - { path: ^/auth, roles: PUBLIC_ACCESS }
         - { path: '^/(fr|en|es)/register', roles: PUBLIC_ACCESS }
